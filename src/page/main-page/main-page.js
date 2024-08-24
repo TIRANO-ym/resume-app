@@ -9,10 +9,10 @@ import ToggleButton from '@mui/material/ToggleButton';
 
 function MainPage() {
   const [darkFlag, setDarkState] = useState(true);
-  // if (window.location.href.indexOf('kakaotalk') !== -1) {
+  if (window.location.href.indexOf('kakaotalk') !== -1) {
     var target_url = 'http://resume-ym.duckdns.org';
     window.location.href = 'kakaotalk://web/openExternal?url='+encodeURIComponent(target_url);
-  // }
+  }
 
   return (
     <div className={`main-test ${darkFlag ? 'darkTheme' : 'lightTheme'}`}>
