@@ -19,7 +19,6 @@ function MainPage() {
 
   return (
     <div className={`main-test ${darkFlag ? 'darkTheme' : 'lightTheme'}`}>
-      {currentInfo}
       <div className="themeToggleButton">
         <ToggleButton
           className="toggleSwitch"
