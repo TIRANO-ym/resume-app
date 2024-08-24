@@ -318,6 +318,7 @@ const Container = styled.div`
     position: absolute;
     top: -380%;
     width: max-content;
+    min-width: 110px;
     max-width: 10vw;
     background-color: rgb(180, 180, 180);
     height: auto;
