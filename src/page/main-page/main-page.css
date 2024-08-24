@@ -140,6 +140,8 @@
       margin-right: 3%;
       width: 25px;
       height: 25px;
+      max-width: 25px;
+      max-height: 25px;
     }
     .my-name {
       /* color: rgb(96, 174, 248); */
