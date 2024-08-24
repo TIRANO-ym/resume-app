@@ -1,0 +1,84 @@
+/* .darkTheme {
+  .main-test {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    .profile-info {
+      .my-name {
+          color: rgb(96, 174, 248);
+      }
+    }
+    .introduce {
+      .header {
+          color: rgb(96, 174, 248);
+      }
+    }
+    .skill {
+      .header {
+          color: rgb(96, 174, 248);
+      }
+    }
+    .work-exp {
+      .header {
+          color: rgb(96, 174, 248);
+      }
+    }
+    .project {
+      .header {
+          color: rgb(96, 174, 248);
+      }
+    }
+    .education {
+      .header {
+          color: rgb(96, 174, 248);
+      }
+    }
+    .etc {
+      .header {
+          color: rgb(96, 174, 248);
+      }
+    }
+  }
+} */
+
+.lightTheme {
+  background-color: green;
+  .main-test {
+        background-color: white;
+        color: black;
+    }
+    .profile-info {
+        .my-name {
+            color: rgb(0, 132, 255);
+        }
+    }
+    .introduce {
+        .header {
+            color: rgb(0, 132, 255);
+        }
+    }
+    .skill {
+        .header {
+            color: rgb(0, 132, 255);
+        }
+    }
+    .work-exp {
+        .header {
+            color: rgb(0, 132, 255);
+        }
+    }
+    .project {
+        .header {
+            color: rgb(0, 132, 255);
+        }
+    }
+    .education {
+        .header {
+            color: rgb(0, 132, 255);
+        }
+    }
+    .etc {
+        .header {
+            color: rgb(0, 132, 255);
+        }
+    }
+}
