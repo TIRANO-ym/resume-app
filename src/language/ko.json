@@ -1,0 +1,68 @@
+{
+    "profile_info": {
+        "name": "성여명",
+        "phone_number": "010-4200-7897"
+    },
+    "introduce": {
+        "content": "Node.js, TypeScript, JavaScript, HTML, CSS, MySQL 등을 활용한 웹 프론트엔드 및 백엔드 개발에 3년의 경험을 보유하고 있습니다. 실시간 모니터링을 위한 웹 서비스를 개발하는 프로젝트에 참여하면서 복잡한 기능들을 개발한 경험을 가지고 있습니다.\n\n웹에서 기본적으로 지켜야 하는 보안 이슈, 빅데이터를 모니터링하며 생기는 성능 이슈, 각 기능들이 독립적으로 수행 가능하고 사용성/확장성/유지보수성을 고려하여 프론트부터 DB까지 좋은 설계를 하기 위해 고민하는 등 웹 개발자로서 다양한 문제를 접하고 해결해본 경험이 있습니다.\n\n특히 Chart를 활용한 데이터 시각화와 드래그 액션을 통한 화면 커스터마이징 등 복잡한 웹 기능들을 사용자 입장에서는 최대한 쉽고 직관적으로 다가갈 수 있도록 설계하고 개발하는 부분에 자신이 있으며 Component 생명 주기와 Promise 등을 활용한 비동기 처리를 이해하고 적극 활용하여 네트워크 지연으로 인한 오류 발생률을 낮추고 제품 품질을 높이고자 합니다.\n\n팀 리더에게 개발 생산성이 좋고 제품 개선을 위한 설계를 적극적으로 제안하는 팀원으로 인정받은 경험이 있습니다. 다른 팀원이 봉착한 문제를 같이 고민하고 리뷰함으로서 팀이 다 같이 성장하는 팀워크와 커뮤니케이션의 중요성을 잘 알고 실천하기 위해 항상 노력합니다."
+    },
+    "skill": {
+        "production_level": "Production\n개발 가능 수준",
+        "hobby_level": "취미 개발 수준"
+    },
+    "work_exp": {
+        "company_wins": "(주)윈스",
+        "3y1m": "3년 1개월",
+        "web_front_and_back_developer": "웹 프론트엔드 및 백엔드 개발자",
+        "assigned_task": "담당업무",
+        "task1": "실시간 모니터링을 위한 웹 서비스 프론트엔드 및 백엔드 개발",
+        "task2": "프로젝트 신규 개발 단계부터 출시 후 기능 고도화와 유지보수 수행",
+        "use_skill": "사용기술",
+        "web": "웹",
+        "test_code": "테스트 코드",
+        "version_control_and_code_review": "버전관리 및 코드리뷰"
+    },
+    "project": {
+        "ai_security_operation_service": "AI 보안관제 솔루션",
+        "custom_dashboard_command": "다양한 Chart를 활용한 데이터 시각화를 중심으로 Componet 단위의 위젯을 사용자가 커스터마이징 가능한 대시보드 개발",
+        "traffic_monitoring_command": "특정 시간대의 트래픽 추이 정보 시각화 기능 개발",
+        "query_logic_command": "사용자가 구성한 쿼리 유효성 검사 및 실제 쿼리로 변환 로직 개발",
+        "pattern_semiauto_command": "패턴 매핑 알고리즘을 적용한 로그 패턴 반자동 분류 기능 개발",
+        "login_mfa_command": "회원가입, 로그인, 계정 권한 및 2차 SMS 인증 기능 개발",
+        "jwt_login_session_command": "JWT 토큰 기반 로그인 세션 관리 프로세스 구축",
+        "test_automation_command": "테스트 자동화: 웹 모니터링 성능 테스트를 위한 스크립트 작성 및 공유하여 5000만 종의 이벤트 수집 시 성능 테스트 환경 제공",
+        "multilingual_command": "다국어 기반 개발 경험: 감사로그 다국어 적용 개발"
+    },
+    "education": {
+        "hanbat_university": "한밭대학교",
+        "cse": "컴퓨터공학과",
+        "graducation": "졸업",
+        "seoul_cyber_university": "서울사이버대학교",
+        "transfer": "편입",
+        "daejeon_high_school": "대전공업고등학교",
+        "semiconductor_department": "반도체학과"
+    },
+    "license": {
+        "engineer_information_processing": "정보처리기사",
+        "get_license": "자격증 취득",
+        "human_resources_development_service_of_korea": "한국산업인력공단",
+        "13th_hanbat_competition": "제 13회 창의적 종합설계 경진대회",
+        "get_bronze_award": "동상 수상",
+        "hanbat_center": "한밭대학교 공학교육혁신센터",
+        "driver_license": "운전면허1종보통",
+        "get_driver_license": "면허증 취득",
+        "daejeon_police": "대전지방경찰청",
+        "craftsman_information_processing": "정보처리기능사",
+        "korea_productivity_center": "한국생산성본부",
+        "itq_excel_a": "ITQ한글엑셀 A등급"
+    },
+    "others": {
+        "tooltip": "핵심 경력과 무관한\n기타 프로젝트입니다",
+        "vr_safty_training_program": "VR 안전교육 프로그램",
+        "self_ordering_system": "어떤 분식집의 셀프 주문 시스템",
+        "software_design_pattern": "소프트웨어 디자인 패턴",
+        "mobile_match_game": "모바일 짝 맞추기 게임 앱",
+        "specific_person_tracking_program": "영상 속 특정 인물 추적 프로그램",
+        "smart_window": "스마트 윈도우"
+    }
+}

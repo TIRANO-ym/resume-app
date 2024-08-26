@@ -1,6 +1,18 @@
 .darkTheme {
   background-color: rgb(44, 44, 44);
   color: white;
+  .topLine {
+    .toggleSwitch {
+      background-color: rgb(173, 173, 173);
+      color: black;
+    }
+    .langSelect {
+      color: white;
+      option {
+        background-color: rgb(44, 44, 44);
+      }
+    }
+  }
   .profile-info {
     .my-name {
         color: rgb(96, 174, 248);
@@ -41,6 +53,18 @@
 .lightTheme {
   background-color: white;
   color: black;
+  .topLine {
+    .toggleSwitch {
+      background-color: rgb(44, 44, 44);
+      color: white;
+    }
+    .langSelect {
+      color: black;
+      option {
+        background-color: white;
+      }
+    }
+  }
   .profile-info {
     .my-name {
       color: rgb(0, 132, 255);
@@ -78,7 +102,7 @@
   }
 }
 
-.themeToggleButton {
+.topLine {
   width: 95%;
   height: fit-content;
   display: flex;
@@ -87,7 +111,13 @@
   .toggleSwitch {
     font-size: 0.7rem;
     height: 10px;
-    color: gray !important;
+    margin-right: 1%;
+  }
+  .langSelect {
+    border-radius: 5px;
+    font-size: 0.7rem;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
@@ -97,6 +127,7 @@
   /* background-color: rgb(44, 44, 44); */
   text-align: center;
   font-size: 2rem;
+  white-space: pre-line
   /* color: white; */
 }
 
