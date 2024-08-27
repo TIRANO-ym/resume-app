@@ -31,7 +31,7 @@
         "login_mfa_command": "회원가입, 로그인, 계정 권한 및 2차 SMS 인증 기능 개발",
         "jwt_login_session_command": "JWT 토큰 기반 로그인 세션 관리 프로세스 구축",
         "test_automation_command": "테스트 자동화: 웹 모니터링 성능 테스트를 위한 스크립트 작성 및 공유하여 5000만 종의 이벤트 수집 시 성능 테스트 환경 제공",
-        "multilingual_command": "다국어 기반 개발 경험: 감사로그 다국어 적용 개발"
+        "multilingual_command": "다국어 기반 개발 경험: 다국어 기반 웹 서비스 개발 및 동적 데이터 값이 포함된 string 로그에 다국어 적용 개발"
     },
     "education": {
         "hanbat_university": "한밭대학교",
