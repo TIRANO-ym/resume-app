@@ -25,12 +25,12 @@
     "project": {
         "ai_security_operation_service": "AI security operation service",
         "custom_dashboard_command": "Develop dashboards that allow users to customize per-Componet widgets, focusing on data visualization using a variety of Charts",
-        "traffic_monitoring_command": "Development of traffic transition information visualization function at specific time period",
+        "traffic_monitoring_command": "development and visualization of traffic transition information providing function in time zone based on specific traffic data",
         "query_logic_command": "Develop logic to validation of user-configured queries and development of conversion logic to actual queries",
         "pattern_semiauto_command": "Development of log pattern semi-automatic classification function",
-        "login_mfa_command": "Development of membership, login, account privileges and second SMS authentication",
+        "login_mfa_command": "Development of login-related features and APIs: Development of membership, login, account privileges and MFA(second SMS authentication)",
         "jwt_login_session_command": "Develop JWT token-based login session management processes",
-        "test_automation_command": "Automate testing: Scripting and sharing for web monitoring performance testing to provide a performance testing environment for collecting 50 million events",
+        "test_automation_command": "Automate testing: Scripting and sharing for web monitoring performance testing to provide a performance testing environment for collecting 50+ million events",
         "multilingual_command": "Multilingualism-based development experience: Multilingual web service development and Multilingual function development to string logs with dynamic data values"
     },
     "education": {
@@ -57,7 +57,8 @@
         "itq_excel_a": "Information Technology Qualification, Excel, Grade A"
     },
     "others": {
-        "tooltip": "Other projects unrelated\nto my core career.",
+        "tooltip": "Other toy projects unrelated\nto my work career.",
+        "movie_web_service": "Movie Web Service",
         "vr_safty_training_program": "VR Safty Training Program",
         "self_ordering_system": "Self-ordering system at a snack bar",
         "software_design_pattern": "Software Design Pattern",

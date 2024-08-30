@@ -24,13 +24,13 @@
     },
     "project": {
         "ai_security_operation_service": "AI 보안관제 솔루션",
-        "custom_dashboard_command": "다양한 Chart를 활용한 데이터 시각화를 중심으로 Componet 단위의 위젯을 사용자가 커스터마이징 가능한 대시보드 개발",
-        "traffic_monitoring_command": "특정 시간대의 트래픽 추이 정보 시각화 기능 개발",
+        "custom_dashboard_command": "Chart 기반 데이터 시각화를 중심으로 Componet 단위의 위젯을 사용자가 커스터마이징 가능한 대시보드 개발",
+        "traffic_monitoring_command": "특정 트래픽 데이터를 기반으로 해당 시간대의 트래픽 추이 정보 제공 기능 개발 및 시각화",
         "query_logic_command": "사용자가 구성한 쿼리 유효성 검사 및 실제 쿼리로 변환 로직 개발",
         "pattern_semiauto_command": "패턴 매핑 알고리즘을 적용한 로그 패턴 반자동 분류 기능 개발",
-        "login_mfa_command": "회원가입, 로그인, 계정 권한 및 2차 SMS 인증 기능 개발",
+        "login_mfa_command": "로그인 관련 기능 및 API 개발: 회원가입, 로그인, 계정 권한, MFA (2차 SMS 인증)",
         "jwt_login_session_command": "JWT 토큰 기반 로그인 세션 관리 프로세스 구축",
-        "test_automation_command": "테스트 자동화: 웹 모니터링 성능 테스트를 위한 스크립트 작성 및 공유하여 5000만 종의 이벤트 수집 시 성능 테스트 환경 제공",
+        "test_automation_command": "테스트 자동화: 웹 모니터링 성능 테스트를 위한 스크립트 작성 및 공유하여 5000만 종 이상의 이벤트 수집 시 성능 테스트 환경 제공",
         "multilingual_command": "다국어 기반 개발 경험: 다국어 기반 웹 서비스 개발 및 동적 데이터 값이 포함된 string 로그에 다국어 적용 개발"
     },
     "education": {
@@ -57,7 +57,8 @@
         "itq_excel_a": "ITQ한글엑셀 A등급"
     },
     "others": {
-        "tooltip": "핵심 경력과 무관한\n기타 프로젝트입니다",
+        "tooltip": "실무 경력과 무관한\n기타 토이 프로젝트입니다",
+        "movie_web_service": "영화 웹 서비스",
         "vr_safty_training_program": "VR 안전교육 프로그램",
         "self_ordering_system": "어떤 분식집의 셀프 주문 시스템",
         "software_design_pattern": "소프트웨어 디자인 패턴",

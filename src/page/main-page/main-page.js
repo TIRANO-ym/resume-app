@@ -2,6 +2,7 @@ import './main-page.css';
 import profile_image from '../../images/profile_image.png';
 import main_icon from '../../images/mail_icon.png';
 import phone_icon from '../../images/phone_icon.png';
+import github_icon from '../../images/github_icon.png';
 import { FaQuestionCircle } from "react-icons/fa";
 import styled from 'styled-components'
 import { useState } from "react";
@@ -92,6 +93,12 @@ function ProfileInfo() {
         <div className="line">
           <img src={main_icon}/>yeomyeong26@gmail.com
         </div>
+        <div className="line">
+          <img src={github_icon}/>
+          <a href="https://github.com/TIRANO-ym">
+            https://github.com/TIRANO-ym
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -135,7 +142,7 @@ function Skill() {
           <tr>
             <td>{t("skill.hobby_level")}</td>
             <td>Java<br/>Python<br/>C#</td>
-            <td>React</td>
+            <td>React<br/>REST API</td>
             <td>Elasticsearch<br/>MongoDB</td>
             <td>Unity<br/>Andriod Studio</td>
             <td>Jest</td>
@@ -166,7 +173,7 @@ function WorkExp() {
           <br/>
           <div>[{t("work_exp.use_skill")}]</div>
             <li>{t("work_exp.web")} Front-end: Angular, TypeScript, HTML, CSS, SCSS</li>
-            <li>{t("work_exp.web")} Back-end: Express, Node.js, JavaScript, MySQL, MariaDB</li>
+            <li>{t("work_exp.web")} Back-end: Express, Node.js, JavaScript, MySQL, MariaDB, Loopback</li>
             <li>{t("work_exp.test_code")}: Jest</li>
             <li>{t("work_exp.version_control_and_code_review")}: GitLab</li>
         </div>
@@ -214,7 +221,7 @@ function Project() {
               </tr>
               <tr>
                 <td>{t("work_exp.web")} BE</td>
-                <td>Express<br/>(Node.js)<br/>REST API</td>
+                <td>Express<br/>(Node.js)<br/>Loopback(REST API)</td>
                 <td>JavaScript<br/>MySQL<br/>Python</td>
                 <td>MariaDB<br/>MongoDB<br/>ES</td>
               </tr>
@@ -370,47 +377,56 @@ function ETC() {
       </div>
       <div className="content">
         <ul>
+          <li>(2024) {t("others.movie_web_service")}</li>
+          <ul>
+            <li>Keyword: 
+              <a className="stag">React</a>
+              <a className="stag">JavaScript</a>
+              <a className="stag">JSX</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/movie-web-app">https://github.com/TIRANO-ym/movie-web-app</a></li>
+          </ul>
           <li>(2020) {t("others.vr_safty_training_program")}</li>
-            <ul>
-              <li>Keyword: 
-                <a className="stag">VR</a>
-                <a className="stag">Unity</a>
-                <a className="stag">C#</a>
-              </li>
-              <li>GitHub: <a href="https://github.com/TIRANO-ym/Unity-VR-Project">https://github.com/TIRANO-ym/Unity-VR-Project</a></li>
-            </ul>
+          <ul>
+            <li>Keyword: 
+              <a className="stag">VR</a>
+              <a className="stag">Unity</a>
+              <a className="stag">C#</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Unity-VR-Project">https://github.com/TIRANO-ym/Unity-VR-Project</a></li>
+          </ul>
           <li>(2020) {t("others.self_ordering_system")}</li>
-            <ul>
-              <li>Keyword: 
-                <a className="stag">{t("others.software_design_pattern")}</a>
-                <a className="stag">Java</a>
-              </li>
-              <li>GitHub: <a href="https://github.com/TIRANO-ym/Java_SoftwareDesign-Project">https://github.com/TIRANO-ym/Java_SoftwareDesign-Project</a></li>
-            </ul>
+          <ul>
+            <li>Keyword: 
+              <a className="stag">{t("others.software_design_pattern")}</a>
+              <a className="stag">Java</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Java_SoftwareDesign-Project">https://github.com/TIRANO-ym/Java_SoftwareDesign-Project</a></li>
+          </ul>
           <li>(2019) {t("others.mobile_match_game")}</li>
-            <ul>
-              <li>Keyword: 
-                <a className="stag">Andriod Studio</a>
-                <a className="stag">Java</a>
-              </li>
-              <li>GitHub: <a href="https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication">https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication</a></li>
-            </ul>
+          <ul>
+            <li>Keyword: 
+              <a className="stag">Andriod Studio</a>
+              <a className="stag">Java</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication">https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication</a></li>
+          </ul>
           <li>(2019) {t("others.specific_person_tracking_program")}</li>
-            <ul>
-              <li>Keyword: 
-                <a className="stag">OpenCV</a>
-                <a className="stag">Python3</a>
-              </li>
-              <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_VideoProcessing-Project">https://github.com/TIRANO-ym/Python_VideoProcessing-Project</a></li>
-            </ul>
+          <ul>
+            <li>Keyword: 
+              <a className="stag">OpenCV</a>
+              <a className="stag">Python3</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_VideoProcessing-Project">https://github.com/TIRANO-ym/Python_VideoProcessing-Project</a></li>
+          </ul>
           <li>(2019) {t("others.smart_window")}</li>
-            <ul>
-              <li>Keyword: 
-                <a className="stag">Arduino</a>
-                <a className="stag">IoT</a>
-                <a className="stag">C</a>
-              </li>
-            </ul>
+          <ul>
+            <li>Keyword: 
+              <a className="stag">Arduino</a>
+              <a className="stag">IoT</a>
+              <a className="stag">C</a>
+            </li>
+          </ul>
         </ul>
       </div>
     </div>
