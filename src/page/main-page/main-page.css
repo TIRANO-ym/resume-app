@@ -150,10 +150,13 @@
   flex-wrap: wrap;
   padding: 2%;
   .my-image {
-    max-height: 150px;
-    max-width: 120px;
+    max-height: 188px;
+    max-width: 150px;
     min-height: 125px;
     min-width: 100px;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .description {
     width: 40vw;
