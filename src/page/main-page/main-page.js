@@ -95,7 +95,7 @@ function ProfileInfo() {
         </div>
         <div className="line">
           <img src={github_icon}/>
-          <a href="https://github.com/TIRANO-ym">
+          <a href="https://github.com/TIRANO-ym" target="_blank" style={{color: "#1d9bf0"}}>
             https://github.com/TIRANO-ym
           </a>
         </div>
@@ -382,9 +382,8 @@ function ETC() {
             <li>Keyword: 
               <a className="stag">React</a>
               <a className="stag">JavaScript</a>
-              <a className="stag">JSX</a>
             </li>
-            <li>GitHub: <a href="https://github.com/TIRANO-ym/movie-web-app">https://github.com/TIRANO-ym/movie-web-app</a></li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/movie-web-app" target="_blank">https://github.com/TIRANO-ym/movie-web-app</a></li>
           </ul>
           <li>(2020) {t("others.vr_safty_training_program")}</li>
           <ul>
@@ -393,7 +392,7 @@ function ETC() {
               <a className="stag">Unity</a>
               <a className="stag">C#</a>
             </li>
-            <li>GitHub: <a href="https://github.com/TIRANO-ym/Unity-VR-Project">https://github.com/TIRANO-ym/Unity-VR-Project</a></li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Unity-VR-Project" target="_blank">https://github.com/TIRANO-ym/Unity-VR-Project</a></li>
           </ul>
           <li>(2020) {t("others.self_ordering_system")}</li>
           <ul>
@@ -401,15 +400,15 @@ function ETC() {
               <a className="stag">{t("others.software_design_pattern")}</a>
               <a className="stag">Java</a>
             </li>
-            <li>GitHub: <a href="https://github.com/TIRANO-ym/Java_SoftwareDesign-Project">https://github.com/TIRANO-ym/Java_SoftwareDesign-Project</a></li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Java_SoftwareDesign-Project" target="_blank">https://github.com/TIRANO-ym/Java_SoftwareDesign-Project</a></li>
           </ul>
           <li>(2019) {t("others.mobile_match_game")}</li>
           <ul>
             <li>Keyword: 
-              <a className="stag">Andriod Studio</a>
+              <a className="stag">Andriod</a>
               <a className="stag">Java</a>
             </li>
-            <li>GitHub: <a href="https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication">https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication</a></li>
+            <li>GitHub: <a href="https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication" target="_blank">https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication</a></li>
           </ul>
           <li>(2019) {t("others.specific_person_tracking_program")}</li>
           <ul>
@@ -417,7 +416,7 @@ function ETC() {
               <a className="stag">OpenCV</a>
               <a className="stag">Python3</a>
             </li>
-            <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_VideoProcessing-Project">https://github.com/TIRANO-ym/Python_VideoProcessing-Project</a></li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_VideoProcessing-Project" target="_blank">https://github.com/TIRANO-ym/Python_VideoProcessing-Project</a></li>
           </ul>
           <li>(2019) {t("others.smart_window")}</li>
           <ul>
