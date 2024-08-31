@@ -103,7 +103,8 @@
 }
 
 .topLine {
-  width: 95%;
+  width: 76%;
+  min-width: 450px;
   height: fit-content;
   display: flex;
   justify-content: right;
