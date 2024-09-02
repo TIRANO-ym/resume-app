@@ -40,6 +40,7 @@ function MainPage() {
           onChange={() => {
             setDarkState(!darkFlag);
           }}
+          value=""
         >
           {darkFlag ? 'Light Mode' : 'Dark Mode'}
         </ToggleButton>
@@ -122,7 +123,7 @@ function Skill() {
     <div className="skill">
       <div className="header">SKILL</div>
       <div className="table">
-        <table style={{width:"100%"}}>
+        <table style={{width:"100%"}}><tbody>
           <tr>
             <td scope="col"> </td>
             <td scope="col">Languages</td>
@@ -147,7 +148,7 @@ function Skill() {
             <td>Unity<br/>Andriod Studio</td>
             <td>Jest</td>
           </tr>
-        </table>
+        </tbody></table>
       </div>
     </div>
   );
@@ -232,7 +233,7 @@ function Project() {
           </li>
           <li>{t("project.multilingual_command")}</li>
           <div className="table">
-            <table style={{width:"100%"}}>
+            <table style={{width:"100%"}}><tbody>
               <tr>
                 <td scope="col"> </td>
                 <td scope="col">OS</td>
@@ -242,7 +243,7 @@ function Project() {
               </tr>
               <tr>
                 <td>{t("work_exp.web")} FE</td>
-                <td rowspan='2'>Window<br/>Linux</td>
+                <td rowSpan='2'>Window<br/>Linux</td>
                 <td>Angular</td>
                 <td>TypeScript<br/>HTML<br/>CSS/SCSS</td>
                 <td>-</td>
@@ -253,7 +254,7 @@ function Project() {
                 <td>JavaScript<br/>MySQL<br/>Python</td>
                 <td>MariaDB<br/>MongoDB<br/>ES</td>
               </tr>
-            </table>
+            </tbody></table>
           </div>
         </div>
       </div>
