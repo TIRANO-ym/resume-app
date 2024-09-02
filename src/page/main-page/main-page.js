@@ -174,7 +174,7 @@ function WorkExp() {
           <div>[{t("work_exp.use_skill")}]</div>
             <li>{t("work_exp.web")} Front-end: Angular, TypeScript, HTML, CSS, SCSS</li>
             <li>{t("work_exp.web")} Back-end: Express, Node.js, JavaScript, MySQL, MariaDB, Loopback</li>
-            <li>{t("work_exp.test_code")}: Jest</li>
+            <li>{t("work_exp.test_code")}: Jest, Python</li>
             <li>{t("work_exp.version_control_and_code_review")}: GitLab</li>
         </div>
       </div>
@@ -184,6 +184,20 @@ function WorkExp() {
 
 function Project() {
   const { t } = useTranslation();
+  // -------- 서브코맨드
+  const SubCommand = ({command}) => {
+    const [isShow, setIsShow] = useState(false);
+    const onClick = () => {
+      setIsShow(c => !c);
+    }
+    return (
+      <div className='sub-command'>
+        <span className='why-button' onClick={onClick}>Why? {isShow ? '▽' : '▷'}</span>
+        {isShow ? <li>{command}</li> : null}
+      </div>
+    );
+  }
+  // ------------------
   return (
     <div className="project">
       <div className="header">PROJECT</div>
@@ -194,14 +208,28 @@ function Project() {
         <div className="content">
           <div className="project-name">{t("project.ai_security_operation_service")}</div>
           <div className="project-client">{t("work_exp.company_wins")}</div>
-
-          <li>{t("project.custom_dashboard_command")}</li>
-          <li>{t("project.traffic_monitoring_command")}</li>
-          <li>{t("project.query_logic_command")}</li>
-          <li>{t("project.pattern_semiauto_command")}</li>
+          <li>
+            {t("project.custom_dashboard_command")}
+            <SubCommand command={t("project.custom_dashboard_command_sub")}/>
+          </li>
+          <li>
+            {t("project.traffic_monitoring_command")}
+            <SubCommand command={t("project.traffic_monitoring_command_sub")}/>
+          </li>
+          <li>
+            {t("project.query_logic_command")}
+            <SubCommand command={t("project.query_logic_command_sub")}/>
+          </li>
+          <li>
+            {t("project.pattern_semiauto_command")}
+            <SubCommand command={t("project.pattern_semiauto_command_sub")}/>
+          </li>
           <li>{t("project.login_mfa_command")}</li>
           <li>{t("project.jwt_login_session_command")}</li>
-          <li>{t("project.test_automation_command")}</li>
+          <li>
+            {t("project.test_automation_command")}
+            <SubCommand command={t("project.test_automation_command_sub")}/>
+          </li>
           <li>{t("project.multilingual_command")}</li>
           <div className="table">
             <table style={{width:"100%"}}>
@@ -368,6 +396,20 @@ const Container = styled.div`
 
 function ETC() {
   const { t } = useTranslation();
+  // -------- 프리뷰 이미지
+  const PreviewImg = ({imgUrl}) => {
+    const [isShow, setIsShow] = useState(false);
+    const onClick = () => {
+      setIsShow(c => !c);
+    }
+    return (
+      <div className='preview-image-box'>
+        <span className='preview-button' onClick={onClick}>Preview {isShow ? '▽' : '▷'}</span>
+        {isShow ? <img className="preview-img" src={imgUrl}/> : null}
+      </div>
+    );
+  }
+  // ------------------
   return (
     <div className="etc">
       <div className="header">OTHERS
@@ -377,6 +419,16 @@ function ETC() {
       </div>
       <div className="content">
         <ul>
+          <li>(2024, {t("others.updating")}) {t("others.twitter_imitating")}</li>
+          <ul>
+            <li>Keyword: 
+              <a className="stag">React</a>
+              <a className="stag">TypeScript</a>
+              <a className="stag">Firebase</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Twitter-imitate" target="_blank">https://github.com/TIRANO-ym/Twitter-imitate</a></li>
+            <li><PreviewImg imgUrl={'/preview_twitter.png'}/></li>
+          </ul>
           <li>(2024) {t("others.movie_web_service")}</li>
           <ul>
             <li>Keyword: 
@@ -384,6 +436,7 @@ function ETC() {
               <a className="stag">JavaScript</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/movie-web-app" target="_blank">https://github.com/TIRANO-ym/movie-web-app</a></li>
+            <li><PreviewImg imgUrl={'/preview_movie_web.png'}/></li>
           </ul>
           <li>(2020) {t("others.vr_safty_training_program")}</li>
           <ul>
@@ -393,6 +446,7 @@ function ETC() {
               <a className="stag">C#</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Unity-VR-Project" target="_blank">https://github.com/TIRANO-ym/Unity-VR-Project</a></li>
+            <li><PreviewImg imgUrl={'/preview_vr_safty.png'}/></li>
           </ul>
           <li>(2020) {t("others.self_ordering_system")}</li>
           <ul>
@@ -409,6 +463,7 @@ function ETC() {
               <a className="stag">Java</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication" target="_blank">https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication</a></li>
+            <li><PreviewImg imgUrl={'/preview_match_game.png'}/></li>
           </ul>
           <li>(2019) {t("others.specific_person_tracking_program")}</li>
           <ul>
@@ -417,6 +472,7 @@ function ETC() {
               <a className="stag">Python3</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_VideoProcessing-Project" target="_blank">https://github.com/TIRANO-ym/Python_VideoProcessing-Project</a></li>
+            <li><PreviewImg imgUrl={'/preview_python_video.png'}/></li>
           </ul>
           <li>(2019) {t("others.smart_window")}</li>
           <ul>
