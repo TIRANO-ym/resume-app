@@ -19,7 +19,7 @@
         "task2": "프로젝트 신규 개발 단계부터 출시 후 기능 고도화와 유지보수 수행",
         "use_skill": "사용기술",
         "web": "웹",
-        "test_code": "테스트 코드",
+        "test_code": "테스트",
         "version_control_and_code_review": "버전관리 및 코드리뷰"
     },
     "project": {
@@ -31,7 +31,13 @@
         "login_mfa_command": "로그인 관련 기능 및 API 개발: 회원가입, 로그인, 계정 권한, MFA (2차 SMS 인증)",
         "jwt_login_session_command": "JWT 토큰 기반 로그인 세션 관리 프로세스 구축",
         "test_automation_command": "테스트 자동화: 웹 모니터링 성능 테스트를 위한 스크립트 작성 및 공유하여 5000만 종 이상의 이벤트 수집 시 성능 테스트 환경 제공",
-        "multilingual_command": "다국어 기반 개발 경험: 다국어 기반 웹 서비스 개발 및 동적 데이터 값이 포함된 string 로그에 다국어 적용 개발"
+        "multilingual_command": "다국어 기반 개발 경험: 다국어 기반 웹 서비스 개발 및 동적 데이터 값이 포함된 string 로그에 다국어 적용 개발",
+
+        "custom_dashboard_command_sub": "사용자마다 다양한 관제 스타일로 인해 여러 종류의 대시보드 개발 요구사항이 꾸준히 발생하는 문제 해결",
+        "traffic_monitoring_command_sub": "특정 데이터에 대한 연관정보도 함께 시각적으로 보여줌으로써 사용자의 데이터 분석 시간 단축",
+        "query_logic_command_sub": "통합검색 기능 고도화. UI에서는 쉽게, 복잡한 부분은 내부 기능으로 자동 처리함으로써 사용성 및 편의성 극대화",
+        "pattern_semiauto_command_sub": "Unknown 로그 발생 시 사용자가 모든 field-value 값을 찾아 분류해야하는 불편 해소",
+        "test_automation_command_sub": "실제 사용 환경을 개발팀 내부에서 재현해볼 수 있도록 함으로써 잠재적 문제 발견 확률을 높이고 테스트 소요 시간 대폭 감소"
     },
     "education": {
         "hanbat_university": "한밭대학교",
@@ -58,6 +64,8 @@
     },
     "others": {
         "tooltip": "실무 경력과 무관한\n기타 토이 프로젝트입니다",
+        "updating": "진행중",
+        "twitter_imitating": "가짜 트위터",
         "movie_web_service": "영화 웹 서비스",
         "vr_safty_training_program": "VR 안전교육 프로그램",
         "self_ordering_system": "어떤 분식집의 셀프 주문 시스템",
