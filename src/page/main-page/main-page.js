@@ -5,14 +5,12 @@ import phone_icon from '../../images/phone_icon.png';
 import github_icon from '../../images/github_icon.png';
 import { FaQuestionCircle } from "react-icons/fa";
 import styled from 'styled-components'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ToggleButton from '@mui/material/ToggleButton';
 import i18n from '../../language/i18n';
 import { useTranslation } from "react-i18next";
 
 function MainPage() {
-  const [darkFlag, setDarkState] = useState(true);
-
   // 카카오 브라우저로 오픈 시 외부 브라우저 사용
   const currentInfo = window.navigator.userAgent.toLowerCase();
   if (currentInfo.indexOf('kakaotalk') !== -1) {
@@ -20,16 +18,39 @@ function MainPage() {
     window.location.href = 'kakaotalk://web/openExternal?url='+encodeURIComponent(target_url);
   }
 
+  // 테마 변경
+  const [darkFlag, setDarkState] = useState(true);  // 기본: 다크
+  const handleSelectTheme = () => {
+    setDarkState(prev => {
+      localStorage.setItem('darkTheme', !prev);
+      return !prev;
+    });
+  }
+
   // 언어 변경
   const langList = [
     { value: "en", name: "English" },
     { value: "ko", name: "한국어" }
   ];
-  const [selectedLang, setSelectedLang] = useState("ko");
+  const [selectedLang, setSelectedLang] = useState("ko");   // 기본: 한국어
   const handleSelectLang = (e) => {
     setSelectedLang(e.target.value);
     i18n.changeLanguage(e.target.value);
+    localStorage.setItem('lang', e.target.value);
   };
+
+  // init
+  useEffect(() => {
+    const lang = localStorage.getItem('lang');
+    const darkTheme = localStorage.getItem('darkTheme');
+    if (lang && ['en', 'ko'].includes(lang)) {
+      setSelectedLang(lang);
+      i18n.changeLanguage(lang);
+    }
+    if (darkTheme !== null) {
+      setDarkState(darkTheme === 'true');
+    }
+  }, []);
 
   return (
     <div className={`main-test ${darkFlag ? 'darkTheme' : 'lightTheme'}`}>
@@ -37,9 +58,7 @@ function MainPage() {
         <ToggleButton
           className="toggleSwitch"
           selected={darkFlag}
-          onChange={() => {
-            setDarkState(!darkFlag);
-          }}
+          onChange={handleSelectTheme}
           value=""
         >
           {darkFlag ? 'Light Mode' : 'Dark Mode'}
