@@ -439,7 +439,7 @@ function ETC() {
       </div>
       <div className="content">
         <ul>
-          <li>(2024, {t("others.updating")}) {t("others.twitter_imitating")}</li>
+          <li>(2024) {t("others.twitter_imitating")}</li>
           <ul>
             <li>Keyword: 
               <a className="stag">React</a>
