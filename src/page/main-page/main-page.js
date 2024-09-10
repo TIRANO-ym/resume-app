@@ -229,7 +229,7 @@ function Project() {
           <div className="project-name">{t("project.ai_security_operation_service")}</div>
           <div className="project-client">{t("work_exp.company_wins")}</div>
           <li>
-            {t("project.custom_dashboard_command")}
+            <span dangerouslySetInnerHTML={{__html: t("project.custom_dashboard_command")}}></span>
             <SubCommand command={t("project.custom_dashboard_command_sub")}/>
           </li>
           <li>
