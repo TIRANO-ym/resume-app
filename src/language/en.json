@@ -32,6 +32,7 @@
         "jwt_login_session_command": "Develop JWT token-based login session management processes",
         "test_automation_command": "Automate testing: Scripting and sharing for web monitoring performance testing to provide a performance testing environment for collecting 50+ million events",
         "multilingual_command": "Multilingualism-based development experience: Multilingual web service development and Multilingual function development to string logs with dynamic data values",
+        "data_migration_command": "Data Migration: Develop DB upgrade script using Procedure to maintain existing data when significant changes in DB structure",
 
         "custom_dashboard_command_sub": "Resolve issues where multiple dashboard development requirements are consistently encountered according to a variety of user's monitoring style",
         "traffic_monitoring_command_sub": "Reduce user data analysis time by visually presenting relevant information about specific data",

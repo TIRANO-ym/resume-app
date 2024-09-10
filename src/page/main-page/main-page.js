@@ -251,6 +251,7 @@ function Project() {
             <SubCommand command={t("project.test_automation_command_sub")}/>
           </li>
           <li>{t("project.multilingual_command")}</li>
+          <li>{t("project.data_migration_command")}</li>
           <div className="table">
             <table style={{width:"100%"}}><tbody>
               <tr>
