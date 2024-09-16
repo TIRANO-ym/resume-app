@@ -147,6 +147,7 @@
   height: fit-content;
   margin-top: 2%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2%;
@@ -497,4 +498,14 @@ table, th, td {
   margin-left: 1%;
   padding-left: 1%;
   padding-right: 1%;
+}
+
+@media (max-width: 600px) {
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .topLine {
+    width: 90%;
+  }
 }
