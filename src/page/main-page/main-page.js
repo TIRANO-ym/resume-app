@@ -440,6 +440,17 @@ function ETC() {
       </div>
       <div className="content">
         <ul>
+          <li>(2024) {t("others.my_friend_bot")}</li>
+          <ul>
+            <li>Keyword: 
+              <a className="stag">React</a>
+              <a className="stag">Express (Node.js)</a>
+              <a className="stag">SQLite</a>
+              <a className="stag">AI chatbot</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/my-chatbot" target="_blank">https://github.com/TIRANO-ym/my-chatbot</a></li>
+            <li><PreviewImg imgUrl={'/preview_mychatbot.png'}/></li>
+          </ul>
           <li>(2024) {t("others.twitter_imitating")}</li>
           <ul>
             <li>Keyword: 
