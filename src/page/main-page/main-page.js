@@ -163,7 +163,7 @@ function Skill() {
             <td>{t("skill.hobby_level")}</td>
             <td>Java<br/>Python<br/>C#</td>
             <td>React<br/>REST API</td>
-            <td>Elasticsearch<br/>MongoDB</td>
+            <td>Elasticsearch<br/>MongoDB<br/>SQLite</td>
             <td>Unity<br/>Andriod Studio</td>
             <td>Jest</td>
           </tr>
