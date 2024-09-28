@@ -5,7 +5,7 @@ import phone_icon from '../../images/phone_icon.png';
 import github_icon from '../../images/github_icon.png';
 import { FaQuestionCircle } from "react-icons/fa";
 import styled from 'styled-components'
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ToggleButton from '@mui/material/ToggleButton';
 import i18n from '../../language/i18n';
 import { useTranslation } from "react-i18next";
@@ -39,6 +39,31 @@ function MainPage() {
     localStorage.setItem('lang', e.target.value);
   };
 
+  // 스크롤 라벨
+  const categories = {
+    'PROFILE': useRef(),
+    'INTRODUCE': useRef(),
+    'SKILL': useRef(),
+    'WORK EXP': useRef(),
+    'PROJECT': useRef(),
+    'EDUCATION': useRef(),
+    'LICENSE': useRef(),
+    'ETC': useRef(),
+  };
+  const categoriesKeys = Object.keys(categories);
+  const [activeSection, setActiveSection] = useState('PROFILE');
+  const onClickCategory = (key) => {
+    categories[key].current.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleScroll = () => {
+    categoriesKeys.forEach(key => {
+      const rect = categories[key].current.getBoundingClientRect();
+      if (rect.top <= 150) {
+        setActiveSection(key);
+      }
+    });
+  }
+
   // init
   useEffect(() => {
     const lang = localStorage.getItem('lang');
@@ -50,11 +75,15 @@ function MainPage() {
     if (darkTheme !== null) {
       setDarkState(darkTheme === 'true');
     }
+    window.addEventListener('scroll', handleScroll, true);
+    return () => {
+      window.removeEventListener('scroll', handleScroll, true);
+    };
   }, []);
 
   return (
     <div className={`main-test ${darkFlag ? 'darkTheme' : 'lightTheme'}`}>
-      <div className="topLine">
+      <div className="topLine" ref={categories['PROFILE']}>
         <ToggleButton
           className="toggleSwitch"
           selected={darkFlag}
@@ -74,21 +103,32 @@ function MainPage() {
           })}
         </select>
       </div>
+      <div className='rightLine'>
+        <ul>
+          {
+            categoriesKeys.map((k, i) => {
+              return <li key={i} onClick={() => onClickCategory(k)} className={activeSection === k ? 'selected' : ''}>
+                <span className='label'>{k}</span>
+              </li>;
+            })
+          }
+        </ul>
+      </div>
       <div><ProfileInfo/></div>
       <div><HLine /></div>
-      <div><Introduce/></div>
+      <div ref={categories['INTRODUCE']}><Introduce/></div>
       <br/><br/>
-      <div><Skill/></div>
+      <div ref={categories['SKILL']}><Skill/></div>
       <br/><br/>
-      <div><WorkExp/></div>
+      <div ref={categories['WORK EXP']}><WorkExp/></div>
       <br/><br/>
-      <div><Project/></div>
+      <div ref={categories['PROJECT']}><Project/></div>
       <br/><br/>
-      <div><Education/></div>
+      <div ref={categories['EDUCATION']}><Education/></div>
       <br/><br/>
-      <div><License/></div>
+      <div ref={categories['LICENSE']}><License/></div>
       <br/><br/>
-      <div><ETC/></div>
+      <div ref={categories['ETC']}><ETC/></div>
       <br/><br/>
     </div>
   );
