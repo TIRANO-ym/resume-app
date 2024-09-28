@@ -13,6 +13,13 @@
       }
     }
   }
+  .rightLine {
+    ul {
+      .selected {
+        color: rgb(96, 174, 248);
+      }
+    }
+  }
   .profile-info {
     .my-name {
         color: rgb(96, 174, 248);
@@ -62,6 +69,13 @@
       color: black;
       option {
         background-color: white;
+      }
+    }
+  }
+  .rightLine {
+    ul {
+      .selected {
+        color: rgb(0, 132, 255);
       }
     }
   }
@@ -119,6 +133,32 @@
     font-size: 0.8rem;
     padding: 2px;
     background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.rightLine {
+  border-left: 1px solid gray;
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  ul {
+    font-size: 1.1rem;
+    color: gray;
+    display: grid;
+    gap: 20px;
+    text-align: left;
+    li {
+      margin-left: -24px;
+      cursor: pointer;
+    }
+    li:hover {
+      color: white;
+    }
   }
 }
 
@@ -499,17 +539,34 @@ table, th, td {
   padding-right: 1%;
 }
 
+@media (max-width: 1111px) {
+  .rightLine {
+    right: 10px;
+    ul {
+      .label {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .skill {
+    .table {
+      overflow-x: auto;
+    }
+  }
+}
+
 @media (max-width: 600px) {
+  .rightLine {
+    right: 0;
+  }
   .profile-info {
     flex-direction: column;
     align-items: center;
   }
   .topLine {
     width: 90%;
-  }
-  .skill {
-    .table {
-      overflow-x: auto;
-    }
   }
 }
