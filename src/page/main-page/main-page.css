@@ -18,6 +18,9 @@
       .selected {
         color: rgb(96, 174, 248);
       }
+      li:hover {
+        color: white;
+      }
     }
   }
   .profile-info {
@@ -76,6 +79,9 @@
     ul {
       .selected {
         color: rgb(0, 132, 255);
+      }
+      li:hover {
+        color: black;
       }
     }
   }
@@ -155,9 +161,6 @@
     li {
       margin-left: -24px;
       cursor: pointer;
-    }
-    li:hover {
-      color: white;
     }
   }
 }
