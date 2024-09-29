@@ -58,6 +58,15 @@
         color: rgb(96, 174, 248);
     }
   }
+  .modal {
+    .wrapper {
+      .top {
+        .imageBox {
+          background-color: rgb(44, 44, 44);
+        }
+      }
+    }
+  }
 }
 
 .lightTheme {
@@ -118,6 +127,15 @@
   .etc {
     .header {
       color: rgb(0, 132, 255);
+    }
+  }
+  .modal {
+    .wrapper {
+      .top {
+        .imageBox {
+          background-color: white;
+        }
+      }
     }
   }
 }
@@ -508,24 +526,12 @@ table, th, td {
         word-break: normal;
       }
     }
-
-    .preview-image-box {
-      display: flex;
-      flex-wrap: wrap;
-      .preview-button {
-        color: #1d9bf0;
-        width: fit-content;
-        cursor: pointer;
-        min-width: 75px;
-        margin-right: 8px;
-      }
-      .preview-button:hover {
-        text-decoration : underline;
-      }
-      .preview-img {
-        width: 50%;
-        min-width: 250px;
-      }
+    .preview-txt {
+      color: #1d9bf0;
+      cursor: pointer;
+    }
+    .preview-txt:hover {
+      text-decoration : underline;
     }
   }
 }
@@ -551,12 +557,32 @@ table, th, td {
       }
     }
   }
+  .modal {
+    .wrapper {
+      width: 100% !important;
+      height: 70% !important;
+    }
+  }
 }
 
 @media (max-width: 960px) {
   .skill {
     .table {
       overflow-x: auto;
+    }
+  }
+  .modal {
+    .wrapper {
+      height: 60% !important;
+      .imageWrapper:hover {
+        border: 1px solid #125e919f !important;
+      }
+      .selected {
+        border: 1px solid #1d9bf0 !important;
+        &:hover {
+          border: 1px solid #1d9bf0 !important;
+        }
+      }
     }
   }
 }
@@ -571,5 +597,17 @@ table, th, td {
   }
   .topLine {
     width: 90%;
+  }
+  .modal {
+    .wrapper {
+      height: 50% !important;
+      .arrowBtn {
+        min-width: 60px !important;
+        width: 60px !important;
+      }
+      .listView {
+        gap: 2px !important;
+      }
+    }
   }
 }
