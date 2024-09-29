@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import ToggleButton from '@mui/material/ToggleButton';
 import i18n from '../../language/i18n';
 import { useTranslation } from "react-i18next";
+import PreviewModal from '../../component/preview-modal';
 
 function MainPage() {
   // 카카오 브라우저로 오픈 시 외부 브라우저 사용
@@ -458,18 +459,69 @@ const Container = styled.div`
 function ETC() {
   const { t } = useTranslation();
   // -------- 프리뷰 이미지
-  const PreviewImg = ({imgUrl}) => {
-    const [isShow, setIsShow] = useState(false);
-    const onClick = () => {
-      setIsShow(c => !c);
-    }
-    return (
-      <div className='preview-image-box'>
-        <span className='preview-button' onClick={onClick}>Preview {isShow ? '▽' : '▷'}</span>
-        {isShow ? <img className="preview-img" src={imgUrl}/> : null}
-      </div>
-    );
-  }
+  const [showModal, setShowModal] = useState(false);
+  const [modalSrc, setModalSrc] = useState(null);
+  const preview_srcs = {
+    'my_friend_bot': [
+      '/previews/mychatbot1.png',
+      '/previews/mychatbot2.png',
+      '/previews/mychatbot3.png',
+      '/previews/mychatbot4.png',
+      '/previews/mychatbot5.png',
+      '/previews/mychatbot6.png',
+      '/previews/mychatbot7.png',
+      '/previews/mychatbot8.png',
+      '/previews/mychatbot9.png'
+    ],
+    'twitter_imitating': [
+      '/previews/twitter1.png',
+      '/previews/twitter2.png',
+      '/previews/twitter3.png',
+      '/previews/twitter4.png',
+      '/previews/twitter5.png',
+      '/previews/twitter6.png',
+      '/previews/twitter7.png'
+    ],
+    'movie_web_service': [
+      '/previews/movie1.png',
+      '/previews/movie2.png'
+    ],
+    'vr_safty_training_program': [
+      '/previews/vrexit1.png',
+      '/previews/vrexit2.png',
+      '/previews/vrexit3.png',
+      '/previews/vrexit4.png',
+      '/previews/vrexit5.png',
+      '/previews/vrexit6.png',
+      '/previews/vrexit7.png',
+      '/previews/vrexit8.png'
+    ],
+    'self_ordering_system': [
+      '/previews/javasdp1.png'
+    ],
+    'mobile_match_game': [
+      '/previews/matchgame1.png',
+      '/previews/matchgame2.png',
+      '/previews/matchgame3.png',
+      '/previews/matchgame4.png',
+      '/previews/matchgame5.png',
+      '/previews/matchgame6.png'
+    ],
+    'specific_person_tracking_program': [
+      '/previews/opencv1.png',
+      '/previews/opencv2.png',
+      '/previews/opencv3.png',
+      '/previews/opencv4.png',
+      '/previews/opencv5.png'
+    ],
+    'smart_window': [
+      '/previews/smartwindow.png'
+    ]
+  };
+  const openPreviewModal = (key) => {
+    setModalSrc(preview_srcs[key]);
+    setShowModal(true);
+  };
   // ------------------
   return (
     <div className="etc">
@@ -489,7 +541,11 @@ function ETC() {
               <a className="stag">AI chatbot</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/my-chatbot" target="_blank">https://github.com/TIRANO-ym/my-chatbot</a></li>
-            <li><PreviewImg imgUrl={'/preview_mychatbot.png'}/></li>
+            <li>
+              <span className='preview-txt' onClick={() => openPreviewModal('my_friend_bot')}>
+                {t("others.preview")}
+              </span>
+            </li>
           </ul>
           <li>(2024) {t("others.twitter_imitating")}</li>
           <ul>
@@ -499,7 +555,11 @@ function ETC() {
               <a className="stag">Firebase</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Twitter-imitate" target="_blank">https://github.com/TIRANO-ym/Twitter-imitate</a></li>
-            <li><PreviewImg imgUrl={'/preview_twitter.png'}/></li>
+            <li>
+              <span className='preview-txt' onClick={() => openPreviewModal('twitter_imitating')}>
+                {t("others.preview")}
+              </span>
+            </li>
           </ul>
           <li>(2024) {t("others.movie_web_service")}</li>
           <ul>
@@ -508,7 +568,11 @@ function ETC() {
               <a className="stag">JavaScript</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/movie-web-app" target="_blank">https://github.com/TIRANO-ym/movie-web-app</a></li>
-            <li><PreviewImg imgUrl={'/preview_movie_web.png'}/></li>
+            <li>
+              <span className='preview-txt' onClick={() => openPreviewModal('movie_web_service')}>
+                {t("others.preview")}
+              </span>
+            </li>
           </ul>
           <li>(2020) {t("others.vr_safty_training_program")}</li>
           <ul>
@@ -518,7 +582,11 @@ function ETC() {
               <a className="stag">C#</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Unity-VR-Project" target="_blank">https://github.com/TIRANO-ym/Unity-VR-Project</a></li>
-            <li><PreviewImg imgUrl={'/preview_vr_safty.png'}/></li>
+            <li>
+              <span className='preview-txt' onClick={() => openPreviewModal('vr_safty_training_program')}>
+                {t("others.preview")}
+              </span>
+            </li>
           </ul>
           <li>(2020) {t("others.self_ordering_system")}</li>
           <ul>
@@ -527,6 +595,11 @@ function ETC() {
               <a className="stag">Java</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Java_SoftwareDesign-Project" target="_blank">https://github.com/TIRANO-ym/Java_SoftwareDesign-Project</a></li>
+            <li>
+              <span className='preview-txt' onClick={() => openPreviewModal('self_ordering_system')}>
+                {t("others.preview")}
+              </span>
+            </li>
           </ul>
           <li>(2019) {t("others.mobile_match_game")}</li>
           <ul>
@@ -535,7 +608,11 @@ function ETC() {
               <a className="stag">Java</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication" target="_blank">https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication</a></li>
-            <li><PreviewImg imgUrl={'/preview_match_game.png'}/></li>
+            <li>
+              <span className='preview-txt' onClick={() => openPreviewModal('mobile_match_game')}>
+                {t("others.preview")}
+              </span>
+            </li>
           </ul>
           <li>(2019) {t("others.specific_person_tracking_program")}</li>
           <ul>
@@ -544,7 +621,11 @@ function ETC() {
               <a className="stag">Python3</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_VideoProcessing-Project" target="_blank">https://github.com/TIRANO-ym/Python_VideoProcessing-Project</a></li>
-            <li><PreviewImg imgUrl={'/preview_python_video.png'}/></li>
+            <li>
+              <span className='preview-txt' onClick={() => openPreviewModal('specific_person_tracking_program')}>
+                {t("others.preview")}
+              </span>
+            </li>
           </ul>
           <li>(2019) {t("others.smart_window")}</li>
           <ul>
@@ -553,9 +634,15 @@ function ETC() {
               <a className="stag">IoT</a>
               <a className="stag">C</a>
             </li>
+            <li>
+              <span className='preview-txt' onClick={() => openPreviewModal('smart_window')}>
+                {t("others.preview")}
+              </span>
+            </li>
           </ul>
         </ul>
       </div>
+      { showModal ? <PreviewModal srcs={modalSrc} onClose={() => setShowModal(false)}/> : null }
     </div>
   );
 }
