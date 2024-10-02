@@ -471,16 +471,17 @@ function ETC() {
       '/previews/mychatbot6.png',
       '/previews/mychatbot7.png',
       '/previews/mychatbot8.png',
-      '/previews/mychatbot9.png'
+      '/previews/mychatbot9.png',
+      '/previews/mychatbot10.png'
     ],
     'twitter_imitating': [
       '/previews/twitter1.png',
       '/previews/twitter2.png',
+      '/previews/twitter7.png',
       '/previews/twitter3.png',
       '/previews/twitter4.png',
       '/previews/twitter5.png',
-      '/previews/twitter6.png',
-      '/previews/twitter7.png'
+      '/previews/twitter6.png'
     ],
     'movie_web_service': [
       '/previews/movie1.png',
@@ -594,7 +595,7 @@ function ETC() {
               <a className="stag">{t("others.software_design_pattern")}</a>
               <a className="stag">Java</a>
             </li>
-            <li>GitHub: <a href="https://github.com/TIRANO-ym/Java_SoftwareDesign-Project" target="_blank">https://github.com/TIRANO-ym/Java_SoftwareDesign-Project</a></li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Java_Software-Design-Project" target="_blank">https://github.com/TIRANO-ym/Java_Software-Design-Project</a></li>
             <li>
               <span className='preview-txt' onClick={() => openPreviewModal('self_ordering_system')}>
                 {t("others.preview")}
@@ -607,7 +608,7 @@ function ETC() {
               <a className="stag">Andriod</a>
               <a className="stag">Java</a>
             </li>
-            <li>GitHub: <a href="https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication" target="_blank">https://github.com/TIRANOym/Android_Project/tree/master/app/src/main/java/com/tirano/myapplication</a></li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Android_Project" target="_blank">https://github.com/TIRANO-ym/Android_Project</a></li>
             <li>
               <span className='preview-txt' onClick={() => openPreviewModal('mobile_match_game')}>
                 {t("others.preview")}
@@ -620,7 +621,7 @@ function ETC() {
               <a className="stag">OpenCV</a>
               <a className="stag">Python3</a>
             </li>
-            <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_VideoProcessing-Project" target="_blank">https://github.com/TIRANO-ym/Python_VideoProcessing-Project</a></li>
+            <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_Video-Processing-Project" target="_blank">https://github.com/TIRANO-ym/Python_Video-Processing-Project</a></li>
             <li>
               <span className='preview-txt' onClick={() => openPreviewModal('specific_person_tracking_program')}>
                 {t("others.preview")}
