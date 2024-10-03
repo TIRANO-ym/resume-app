@@ -13,11 +13,11 @@ import PreviewModal from '../../component/preview-modal';
 
 function MainPage() {
   // 카카오 브라우저로 오픈 시 외부 브라우저 사용
-  const currentInfo = window.navigator.userAgent.toLowerCase();
-  if (currentInfo.indexOf('kakaotalk') !== -1) {
-    var target_url = 'http://resume-ym.duckdns.org';
-    window.location.href = 'kakaotalk://web/openExternal?url='+encodeURIComponent(target_url);
-  }
+  // const currentInfo = window.navigator.userAgent.toLowerCase();
+  // if (currentInfo.indexOf('kakaotalk') !== -1) {
+  //   var target_url = 'http://resume-ym.duckdns.org';
+  //   window.location.href = 'kakaotalk://web/openExternal?url='+encodeURIComponent(target_url);
+  // }
 
   // 테마 변경
   const [darkFlag, setDarkState] = useState(true);  // 기본: 다크
@@ -105,10 +105,10 @@ function MainPage() {
         </select>
       </div>
       <div className='rightLine'>
-        <ul>
+        <ul className='ul-wrapper'>
           {
             categoriesKeys.map((k, i) => {
-              return <li key={i} onClick={() => onClickCategory(k)} className={activeSection === k ? 'selected' : ''}>
+              return <li key={i} onClick={() => onClickCategory(k)} className={`li-wrapper${activeSection === k ? ' selected' : ''}`}>
                 <span className='label'>{k}</span>
               </li>;
             })
@@ -149,13 +149,13 @@ function ProfileInfo() {
       <div className="description">
         <div className="my-name">{t("profile_info.name")}</div>
         <div className="line" style={{marginTop: "3%"}}>
-          <img src={phone_icon}/> {t("profile_info.phone_number")}
+          <img className="icon-image" src={phone_icon}/> {t("profile_info.phone_number")}
         </div>
         <div className="line">
-          <img src={main_icon}/>yeomyeong26@gmail.com
+          <img className="icon-image" src={main_icon}/>yeomyeong26@gmail.com
         </div>
         <div className="line">
-          <img src={github_icon}/>
+          <img className="icon-image" src={github_icon}/>
           <a href="https://github.com/TIRANO-ym" target="_blank" style={{color: "#1d9bf0"}}>
             https://github.com/TIRANO-ym
           </a>
@@ -185,28 +185,28 @@ function Skill() {
       <div className="table">
         <table style={{width:"100%"}}><tbody>
           <tr>
-            <td scope="col"> </td>
-            <td scope="col">Languages</td>
-            <td scope="col">Frameworks<br/>& Libraries</td>
-            <td scope="col">Infrastructure<br/>& Databases</td>
-            <td scope="col">Tools<br/>& IDEs</td>
-            <td scope="col">Misc</td>
+            <td className='td' scope="col"> </td>
+            <td className='td' scope="col">Languages</td>
+            <td className='td' scope="col">Frameworks<br/>& Libraries</td>
+            <td className='td' scope="col">Infrastructure<br/>& Databases</td>
+            <td className='td' scope="col">Tools<br/>& IDEs</td>
+            <td className='td' scope="col">Misc</td>
           </tr>
           <tr>
-            <td>{t("skill.production_level")}</td>
-            <td>TypeScript<br/>JavaScript<br/>HTML<br/>CSS/SCSS</td>
-            <td>Angular<br/>Express<br/>Node.js</td>
-            <td>MariaDB<br/>MySQL</td>
-            <td>VS Code<br/>Webstorm<br/>GitLab</td>
-            <td>Linux<br/>Agile<br/>DevOps<br/>Redux</td>
+            <td className='td'>{t("skill.production_level")}</td>
+            <td className='td'>TypeScript<br/>JavaScript<br/>HTML<br/>CSS/SCSS</td>
+            <td className='td'>Angular<br/>Express<br/>Node.js</td>
+            <td className='td'>MariaDB<br/>MySQL</td>
+            <td className='td'>VS Code<br/>Webstorm<br/>GitLab</td>
+            <td className='td'>Linux<br/>Agile<br/>DevOps<br/>Redux</td>
           </tr>
           <tr>
-            <td>{t("skill.hobby_level")}</td>
-            <td>Java<br/>Python<br/>C/C#</td>
-            <td>React<br/>REST API</td>
-            <td>Elasticsearch<br/>MongoDB<br/>SQLite</td>
-            <td>Unity<br/>Andriod Studio</td>
-            <td>Jest</td>
+            <td className='td'>{t("skill.hobby_level")}</td>
+            <td className='td'>Java<br/>Python<br/>C/C#</td>
+            <td className='td'>React<br/>REST API</td>
+            <td className='td'>Elasticsearch<br/>MongoDB<br/>SQLite</td>
+            <td className='td'>Unity<br/>Andriod Studio</td>
+            <td className='td'>Jest</td>
           </tr>
         </tbody></table>
       </div>
@@ -254,7 +254,7 @@ function Project() {
     return (
       <div className='sub-command'>
         <span className='why-button' onClick={onClick}>Why? {isShow ? '▽' : '▷'}</span>
-        {isShow ? <li>{command}</li> : null}
+        {isShow ? <li className='li'>{command}</li> : null}
       </div>
     );
   }
@@ -269,51 +269,51 @@ function Project() {
         <div className="content">
           <div className="project-name">{t("project.ai_security_operation_service")}</div>
           <div className="project-client">{t("work_exp.company_wins")}</div>
-          <li>
+          <li className='li'>
             <span dangerouslySetInnerHTML={{__html: t("project.custom_dashboard_command")}}></span>
             <SubCommand command={t("project.custom_dashboard_command_sub")}/>
           </li>
-          <li>
+          <li className='li'>
             {t("project.traffic_monitoring_command")}
             <SubCommand command={t("project.traffic_monitoring_command_sub")}/>
           </li>
-          <li>
+          <li className='li'>
             {t("project.query_logic_command")}
             <SubCommand command={t("project.query_logic_command_sub")}/>
           </li>
-          <li>
+          <li className='li'>
             {t("project.pattern_semiauto_command")}
             <SubCommand command={t("project.pattern_semiauto_command_sub")}/>
           </li>
-          <li>{t("project.login_mfa_command")}</li>
-          <li>{t("project.jwt_login_session_command")}</li>
-          <li>
+          <li className='li'>{t("project.login_mfa_command")}</li>
+          <li className='li'>{t("project.jwt_login_session_command")}</li>
+          <li className='li'>
             {t("project.test_automation_command")}
             <SubCommand command={t("project.test_automation_command_sub")}/>
           </li>
-          <li>{t("project.multilingual_command")}</li>
-          <li>{t("project.data_migration_command")}</li>
+          <li className='li'>{t("project.multilingual_command")}</li>
+          <li className='li'>{t("project.data_migration_command")}</li>
           <div className="table">
             <table style={{width:"100%"}}><tbody>
               <tr>
-                <td scope="col"> </td>
-                <td scope="col">OS</td>
-                <td scope="col">Framework</td>
-                <td scope="col">Language</td>
-                <td scope="col">DB</td>
+                <td className="td" scope="col"> </td>
+                <td className="td" scope="col">OS</td>
+                <td className="td" scope="col">Framework</td>
+                <td className="td" scope="col">Language</td>
+                <td className="td" scope="col">DB</td>
               </tr>
               <tr>
-                <td>{t("work_exp.web")} FE</td>
-                <td rowSpan='2'>Window<br/>Linux</td>
-                <td>Angular</td>
-                <td>TypeScript<br/>HTML<br/>CSS/SCSS</td>
-                <td>-</td>
+                <td className="td">{t("work_exp.web")} FE</td>
+                <td className="td" rowSpan='2'>Window<br/>Linux</td>
+                <td className="td">Angular</td>
+                <td className="td">TypeScript<br/>HTML<br/>CSS/SCSS</td>
+                <td className="td">-</td>
               </tr>
               <tr>
-                <td>{t("work_exp.web")} BE</td>
-                <td>Express<br/>(Node.js)<br/>Loopback(REST API)</td>
-                <td>JavaScript<br/>MySQL<br/>Python</td>
-                <td>MariaDB<br/>MongoDB<br/>ES</td>
+                <td className="td">{t("work_exp.web")} BE</td>
+                <td className="td">Express<br/>(Node.js)<br/>Loopback(REST API)</td>
+                <td className="td">JavaScript<br/>MySQL<br/>Python</td>
+                <td className="td">MariaDB<br/>MongoDB<br/>ES</td>
               </tr>
             </tbody></table>
           </div>
@@ -534,7 +534,7 @@ function ETC() {
       <div className="content">
         <ul>
           <li>(2024) {t("others.my_friend_bot")}</li>
-          <ul>
+          <ul className='ul'>
             <li>Keyword: 
               <a className="stag">React</a>
               <a className="stag">Express (Node.js)</a>
@@ -542,100 +542,100 @@ function ETC() {
               <a className="stag">AI chatbot</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/my-chatbot" target="_blank">https://github.com/TIRANO-ym/my-chatbot</a></li>
-            <li>
+            <li className='li'>
               <span className='preview-txt' onClick={() => openPreviewModal('my_friend_bot')}>
                 {t("others.preview")}
               </span>
             </li>
           </ul>
           <li>(2024) {t("others.twitter_imitating")}</li>
-          <ul>
+          <ul className='ul'>
             <li>Keyword: 
               <a className="stag">React</a>
               <a className="stag">TypeScript</a>
               <a className="stag">Firebase</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Twitter-imitate" target="_blank">https://github.com/TIRANO-ym/Twitter-imitate</a></li>
-            <li>
+            <li className='li'>
               <span className='preview-txt' onClick={() => openPreviewModal('twitter_imitating')}>
                 {t("others.preview")}
               </span>
             </li>
           </ul>
           <li>(2024) {t("others.movie_web_service")}</li>
-          <ul>
+          <ul className='ul'>
             <li>Keyword: 
               <a className="stag">React</a>
               <a className="stag">JavaScript</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/movie-web-app" target="_blank">https://github.com/TIRANO-ym/movie-web-app</a></li>
-            <li>
+            <li className='li'>
               <span className='preview-txt' onClick={() => openPreviewModal('movie_web_service')}>
                 {t("others.preview")}
               </span>
             </li>
           </ul>
           <li>(2020) {t("others.vr_safty_training_program")}</li>
-          <ul>
+          <ul className='ul'>
             <li>Keyword: 
               <a className="stag">VR</a>
               <a className="stag">Unity</a>
               <a className="stag">C#</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Unity-VR-Project" target="_blank">https://github.com/TIRANO-ym/Unity-VR-Project</a></li>
-            <li>
+            <li className='li'>
               <span className='preview-txt' onClick={() => openPreviewModal('vr_safty_training_program')}>
                 {t("others.preview")}
               </span>
             </li>
           </ul>
           <li>(2020) {t("others.self_ordering_system")}</li>
-          <ul>
+          <ul className='ul'>
             <li>Keyword: 
               <a className="stag">{t("others.software_design_pattern")}</a>
               <a className="stag">Java</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Java_Software-Design-Project" target="_blank">https://github.com/TIRANO-ym/Java_Software-Design-Project</a></li>
-            <li>
+            <li className='li'>
               <span className='preview-txt' onClick={() => openPreviewModal('self_ordering_system')}>
                 {t("others.preview")}
               </span>
             </li>
           </ul>
           <li>(2019) {t("others.mobile_match_game")}</li>
-          <ul>
+          <ul className='ul'>
             <li>Keyword: 
               <a className="stag">Andriod</a>
               <a className="stag">Java</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Android_Project" target="_blank">https://github.com/TIRANO-ym/Android_Project</a></li>
-            <li>
+            <li className='li'>
               <span className='preview-txt' onClick={() => openPreviewModal('mobile_match_game')}>
                 {t("others.preview")}
               </span>
             </li>
           </ul>
           <li>(2019) {t("others.specific_person_tracking_program")}</li>
-          <ul>
+          <ul className='ul'>
             <li>Keyword: 
               <a className="stag">OpenCV</a>
               <a className="stag">Python3</a>
             </li>
             <li>GitHub: <a href="https://github.com/TIRANO-ym/Python_Video-Processing-Project" target="_blank">https://github.com/TIRANO-ym/Python_Video-Processing-Project</a></li>
-            <li>
+            <li className='li'>
               <span className='preview-txt' onClick={() => openPreviewModal('specific_person_tracking_program')}>
                 {t("others.preview")}
               </span>
             </li>
           </ul>
           <li>(2019) {t("others.smart_window")}</li>
-          <ul>
+          <ul className='ul'>
             <li>Keyword: 
               <a className="stag">Arduino</a>
               <a className="stag">IoT</a>
               <a className="stag">C</a>
             </li>
-            <li>
+            <li className='li'>
               <span className='preview-txt' onClick={() => openPreviewModal('smart_window')}>
                 {t("others.preview")}
               </span>

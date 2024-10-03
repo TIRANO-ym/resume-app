@@ -57,14 +57,14 @@ export default function PreviewModal({ srcs, onClose }) {
     <div className="wrapper" onClick={onClickOverlay}>
       <div className="top">
         <div className={`arrowBtn${selectedIdx === 0 ? ' disabled' : ''}`} onClick={leftClick}><LeftIcon/></div>
-        <div className="imageBox"><img draggable={false} src={srcs[selectedIdx]} alt={srcs[selectedIdx]}/></div>
+        <div className="imageBox"><img className="img" draggable={false} src={srcs[selectedIdx]} alt={srcs[selectedIdx]}/></div>
         <div className={`arrowBtn${selectedIdx === (srcs.length - 1) ? ' disabled' : ''}`} onClick={rightClick}><RightIcon/></div>
       </div>
       <div className="bottom">
         <div className="listView" ref={listRef} onMouseDown={handleDragStart} onMouseUp={handleDragEnd} onMouseMove={handleDrag}>
           {
             srcs.map((src, i) => {
-              return <div className={`imgWrapper${i === selectedIdx ? ' selected' : ''}`} onClick={(e) => clickImg(e, i)}><img draggable={false} src={src} key={i} alt={`allImg${i}`}/></div>;
+              return <div className={`imgWrapper${i === selectedIdx ? ' selected' : ''}`} onClick={(e) => clickImg(e, i)}><img className="img" draggable={false} src={src} key={i} alt={`allImg${i}`}/></div>;
             })
           }
         </div>
