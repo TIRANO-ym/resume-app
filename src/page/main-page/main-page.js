@@ -313,7 +313,7 @@ function Project() {
                 <td className="td">{t("work_exp.web")} BE</td>
                 <td className="td">Express<br/>(Node.js)<br/>Loopback(REST API)</td>
                 <td className="td">JavaScript<br/>MySQL<br/>Python</td>
-                <td className="td">MariaDB<br/>MongoDB<br/>ES</td>
+                <td className="td">MariaDB<br/>MongoDB<br/>Elasticsearch</td>
               </tr>
             </tbody></table>
           </div>
