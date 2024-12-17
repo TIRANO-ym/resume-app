@@ -153,11 +153,14 @@ function ProfileInfo() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const mode = params.get('mode');
+    console.log('mode: ', mode);
     if (mode === 'secure') {
+      console.log('secure mode.');
       setImage(profile_secure_image);
       setPhoneNumber(t("profile_info.phone_number").replace(/[0-9]/gi, '*'));
       setEmail('**********@*****.***');
     } else {
+      console.log('normal mode.');
       setPhoneNumber(t("profile_info.phone_number"));
       setEmail('yeomyeong26@gmail.com');
     }
