@@ -1,5 +1,6 @@
 import './main-page.css';
 import profile_image from '../../images/profile_image.png';
+import profile_secure_image from '../../images/profile_secure_image.png';
 import main_icon from '../../images/mail_icon.png';
 import phone_icon from '../../images/phone_icon.png';
 import github_icon from '../../images/github_icon.png';
@@ -10,6 +11,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import i18n from '../../language/i18n';
 import { useTranslation } from "react-i18next";
 import PreviewModal from '../../component/preview-modal';
+// import { useLocation } from 'react-router-dom';
 
 function MainPage() {
   // 카카오 브라우저로 오픈 시 외부 브라우저 사용
@@ -143,16 +145,34 @@ function HLine() {
 
 function ProfileInfo() {
   const { t } = useTranslation();
+  
+  const [image, setImage] = useState(profile_image);
+  const [phone_number, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const mode = params.get('mode');
+    if (mode === 'secure') {
+      setImage(profile_secure_image);
+      setPhoneNumber(t("profile_info.phone_number").replace(/[0-9]/gi, '*'));
+      setEmail('**********@*****.***');
+    } else {
+      setPhoneNumber(t("profile_info.phone_number"));
+      setEmail('yeomyeong26@gmail.com');
+    }
+  }, []);
+
   return (
     <div className="profile-info">
-      <img className="my-image" src={profile_image}/>
+      <img className="my-image" src={image}/>
       <div className="description">
         <div className="my-name">{t("profile_info.name")}</div>
         <div className="line" style={{marginTop: "3%"}}>
-          <img className="icon-image" src={phone_icon}/> {t("profile_info.phone_number")}
+          <img className="icon-image" src={phone_icon}/> {phone_number}
         </div>
         <div className="line">
-          <img className="icon-image" src={main_icon}/>yeomyeong26@gmail.com
+          <img className="icon-image" src={main_icon}/>{email}
         </div>
         <div className="line">
           <img className="icon-image" src={github_icon}/>
