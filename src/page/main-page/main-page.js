@@ -218,12 +218,12 @@ function Skill() {
             <td className='td'>Angular<br/>Express<br/>Node.js</td>
             <td className='td'>MariaDB<br/>MySQL</td>
             <td className='td'>VS Code<br/>Webstorm<br/>GitLab</td>
-            <td className='td'>Linux<br/>Agile<br/>DevOps<br/>Redux</td>
+            <td className='td'>Linux<br/>Agile<br/>Redux</td>
           </tr>
           <tr>
             <td className='td'>{t("skill.hobby_level")}</td>
             <td className='td'>Java<br/>Python<br/>C/C#</td>
-            <td className='td'>React<br/>REST API</td>
+            <td className='td'>React<br/>Vue<br/>REST API<br/>SpringBoot</td>
             <td className='td'>Elasticsearch<br/>MongoDB<br/>SQLite</td>
             <td className='td'>Unity<br/>Andriod Studio</td>
             <td className='td'>Jest</td>
@@ -241,6 +241,26 @@ function WorkExp() {
       <div className="header">WORK EXPERIENCE</div>
       <div className="exp">
         <div className="period">
+          2025.02 ~
+          <br/>
+          <div className="box">{t("work_exp.current")}</div>
+        </div>
+        <div className="content">
+          <div className="company-name">{t("work_exp.company_clobot")}</div>
+          <div className="company-role">{t("work_exp.web_front_developer")}</div>
+          <div>[{t("work_exp.assigned_task")}]</div>
+            <li>{t("work_exp.clobot_task1")}</li>
+            <li>{t("work_exp.clobot_task2")}</li>
+          <br/>
+          <div>[{t("work_exp.use_skill")}]</div>
+            <li>Framework & Language: Vue, TypeScript, HTML, CSS, SCSS</li>
+            <li>Libraries: Quasar, Konva, Storybook</li>
+            <li>{t("work_exp.collaborative_tools")}: Jira</li>
+            <li>{t("work_exp.version_control_and_code_review")}: GitLab</li>
+        </div>
+      </div>
+      <div className="exp">
+        <div className="period">
           2021.02 ~ 2024.02
           <br/>
           <div className="box">{t("work_exp.3y1m")}</div>
@@ -254,8 +274,9 @@ function WorkExp() {
           <br/>
           <div>[{t("work_exp.use_skill")}]</div>
             <li>{t("work_exp.web")} Front-end: Angular, TypeScript, HTML, CSS, SCSS</li>
-            <li>{t("work_exp.web")} Back-end: Express, Node.js, JavaScript, MySQL, MariaDB, Loopback</li>
+            <li>{t("work_exp.web")} Back-end: Express(Node.js), JavaScript, MySQL, MariaDB, Loopback</li>
             <li>{t("work_exp.test_code")}: Jest, Python</li>
+            <li>{t("work_exp.collaborative_tools")}: RedMine</li>
             <li>{t("work_exp.version_control_and_code_review")}: GitLab</li>
         </div>
       </div>
