@@ -253,8 +253,7 @@ function WorkExp() {
             <li>{t("work_exp.clobot_task2")}</li>
           <br/>
           <div>[{t("work_exp.use_skill")}]</div>
-            <li>Framework & Language: Vue, TypeScript, HTML, CSS, SCSS</li>
-            <li>Libraries: Quasar, Konva, Storybook</li>
+            <li>{t("work_exp.web")} Front-end: Vue3, TypeScript, HTML, CSS, SCSS, Quasar, Konva, Storybook</li>
             <li>{t("work_exp.collaborative_tools")}: Jira</li>
             <li>{t("work_exp.version_control_and_code_review")}: GitLab</li>
         </div>
