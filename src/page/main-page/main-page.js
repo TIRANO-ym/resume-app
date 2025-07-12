@@ -215,7 +215,7 @@ function Skill() {
           <tr>
             <td className='td'>{t("skill.production_level")}</td>
             <td className='td'>TypeScript<br/>JavaScript<br/>HTML<br/>CSS/SCSS</td>
-            <td className='td'>Angular<br/>Express<br/>Node.js</td>
+            <td className='td'>Angular<br/>Express<br/>Node.js<br/>Vue</td>
             <td className='td'>MariaDB<br/>MySQL</td>
             <td className='td'>VS Code<br/>Webstorm<br/>GitLab</td>
             <td className='td'>Linux<br/>Agile<br/>Redux</td>
@@ -223,7 +223,7 @@ function Skill() {
           <tr>
             <td className='td'>{t("skill.hobby_level")}</td>
             <td className='td'>Java<br/>Python<br/>C/C#</td>
-            <td className='td'>React<br/>Vue<br/>REST API<br/>SpringBoot</td>
+            <td className='td'>React<br/>REST API<br/>SpringBoot</td>
             <td className='td'>Elasticsearch<br/>MongoDB<br/>SQLite</td>
             <td className='td'>Unity<br/>Andriod Studio</td>
             <td className='td'>Jest</td>
@@ -254,6 +254,7 @@ function WorkExp() {
           <br/>
           <div>[{t("work_exp.use_skill")}]</div>
             <li>{t("work_exp.web")} Front-end: Vue3, TypeScript, HTML, CSS, SCSS, Quasar, Konva, Storybook</li>
+            <li>{t("work_exp.web")} Back-end: Gradle, SpringBoot, Java, MySQL, MariaDB</li>
             <li>{t("work_exp.collaborative_tools")}: Jira</li>
             <li>{t("work_exp.version_control_and_code_review")}: GitLab</li>
         </div>
