@@ -1,0 +1,38 @@
+.darkTheme {
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+
+.lightTheme {
+  background-color: white;
+  color: black;
+}
+
+.block-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2rem;
+  color: white;
+
+  .container {
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+    .header-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgb(96, 174, 248);
+      margin: 2% 0;
+    }
+    .contact-text {
+      font-size: 1rem;
+      text-align: start;
+      color: gray;
+    }
+  }
+}
