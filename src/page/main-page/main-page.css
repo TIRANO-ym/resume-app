@@ -449,6 +449,10 @@ table, th, td {
       }
     }
   }
+
+  .exp + .exp {
+    margin-top: 1.5%;
+  }
 }
 
 .education {

@@ -302,7 +302,55 @@ function Project() {
   // ------------------
   return (
     <div className="project">
-      <div className="header">PROJECT</div>
+      <div className="header">PROJECT & PERFORMANCE</div>
+      <div className="exp">
+        <div className="period">
+          2025.02 ~
+        </div>
+        <div className="content">
+          <div className="project-name">{t("project.robot_operation_service")}</div>
+          <div className="project-client">{t("work_exp.company_clobot")}</div>
+          <li className='li'>
+            {t("project.git_monorepo_command")}
+            <SubCommand command={t("project.git_monorepo_command_sub")}/>
+          </li>
+          <li className='li'>
+            {t("project.common_chart_component_command")}
+            <SubCommand command={t("project.common_chart_component_command_sub")}/>
+          </li>
+          <li className='li'>{t("project.new_page_develop_publishing_command")}</li>
+          <li className='li'>{t("project.docker_issue_resolve_command")}</li>
+          <div className="table">
+            <table style={{width:"100%"}}><tbody>
+              <tr>
+                <td className="td" scope="col"> </td>
+                <td className="td" scope="col">Framework</td>
+                <td className="td" scope="col">Language</td>
+                <td className="td" scope="col">DB</td>
+                <td className="td" scope="col">Misc</td>
+              </tr>
+              <tr>
+                <td className="td">{t("work_exp.web")} FE</td>
+                <td className="td">Vue3</td>
+                <td className="td">TypeScript<br/>HTML<br/>CSS/SCSS</td>
+                <td className="td">-</td>
+                <td className="td">Storybook</td>
+              </tr>
+              <tr>
+                <td className="td">{t("work_exp.web")} BE</td>
+                <td className="td">SpringBoot<br/>Open API</td>
+                <td className="td">Java<br/>MySQL</td>
+                <td className="td">MariaDB<br/>Elasticsearch</td>
+                <td className="td">-</td>
+              </tr>
+              <tr>
+                <td className="td">{t("project.deploy")}</td>
+                <td className="td" colSpan='4'>Docker<br/>Kubernetes</td>
+              </tr>
+            </tbody></table>
+          </div>
+        </div>
+      </div>
       <div className="exp">
         <div className="period">
           2021.02 ~ 2024.02

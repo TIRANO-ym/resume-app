@@ -29,7 +29,7 @@
         "clobot_task2": "Functional development, sophistication, and maintenance"
     },
     "project": {
-        "ai_security_operation_service": "AI security operation service",
+        "ai_security_operation_service": "AI Security Monitoring&Control Solution",
         "custom_dashboard_command": "Develop realtime dashboards that allow users to customize per-Componet widgets, focusing on data visualization using a variety of Charts <span style=\"font-size: 0.8rem;\">(Bar, Line, Pie, Grid, World-map, etc.)</span>",
         "traffic_monitoring_command": "development and visualization of traffic transition information providing function in time zone based on realtime traffic data",
         "query_logic_command": "Develop logic to validation of user-configured queries and development of conversion logic to actual queries",
@@ -44,7 +44,15 @@
         "traffic_monitoring_command_sub": "Reduce user data analysis time by visually presenting relevant information about specific data",
         "query_logic_command_sub": "Advanced integrated-search capabilities. Maximize usability and convenience by: UI is easy + Complex parts are automatically processing by internal functions",
         "pattern_semiauto_command_sub": "Eliminate the inconvenience of user having to find and classify all field-value values when an Unknown log occurs",
-        "test_automation_command_sub": "Increase probability of finding potential problems and significantly reduce test time by allowing the development team to reproduce the actual usage environment within the development team"
+        "test_automation_command_sub": "Increase probability of finding potential problems and significantly reduce test time by allowing the development team to reproduce the actual usage environment within the development team",
+        "robot_operation_service": "Robot Integrated Monitoring&Control Solution",
+        "deploy": "Deploy",
+        "git_monorepo_command": "Announcement of the proposal for Git Project into Mono-Repo for Integrated Management and Collaboration Strategy",
+        "git_monorepo_command_sub": "Create and announce the direction and implementation of current problems that are difficult to document, work structure, version control, and history tracking in ppt, and present the first starting point for building a long-term development process and management system",
+        "new_page_develop_publishing_command": "Develop new dashboards and statistical pages, Overall web publishing",
+        "common_chart_component_command": "Development of common Chart components, Defining guide document with  Storybook",
+        "common_chart_component_command_sub": "Significantly reduce time to develop data visualization pages for front-end developers",
+        "docker_issue_resolve_command": "Partial support for backend operations: Backend error correction and guide documentation when building Docker+k8s environment"
     },
     "education": {
         "hanbat_university": "Hanbat National University",

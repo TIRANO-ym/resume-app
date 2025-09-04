@@ -44,7 +44,15 @@
         "traffic_monitoring_command_sub": "특정 데이터에 대한 연관정보도 함께 시각적으로 보여줌으로써 사용자의 데이터 분석 시간 단축",
         "query_logic_command_sub": "통합검색 기능 고도화. UI에서는 쉽게, 복잡한 부분은 내부 기능으로 자동 처리함으로써 사용성 및 편의성 극대화",
         "pattern_semiauto_command_sub": "Unknown 로그 발생 시 사용자가 모든 field-value 값을 찾아 분류해야하는 불편 해소",
-        "test_automation_command_sub": "실제 사용 환경을 개발팀 내부에서 재현해볼 수 있도록 함으로써 잠재적 문제 발견 확률을 높이고 테스트 소요 시간 대폭 감소"
+        "test_automation_command_sub": "실제 사용 환경을 개발팀 내부에서 재현해볼 수 있도록 함으로써 잠재적 문제 발견 확률을 높이고 테스트 소요 시간 대폭 감소",
+        "robot_operation_service": "이기종 로봇 통합관제 솔루션",
+        "deploy": "배포",
+        "git_monorepo_command": "Git 프로젝트 모노레포로 통합 관리 및 협업 전략 제안 발표",
+        "git_monorepo_command_sub": "문서화, 업무 체계, 버전 관리, 히스토리 추적이 어려운 현 문제점에 대한 해결 방향과 실현 방법을 ppt로 작성하고 발표하여 장기적인 개발 프로세스와 관리 체계 구축의 첫 출발점 제시",
+        "new_page_develop_publishing_command": "신규 대시보드 및 통계 페이지 개발, 전체적인 웹 퍼블리싱 작업",
+        "common_chart_component_command": "공용 Chart 컴포넌트 개발 및 가이드 문서 스토리북 정의",
+        "common_chart_component_command_sub": "프론트엔드 개발자들의 데이터 시각화 페이지 개발시간 대폭 감소",
+        "docker_issue_resolve_command": "백엔드 업무 일부 지원: Docker + k8s 환경구축 시 백엔드 에러 수정 및 가이드 문서화"
     },
     "education": {
         "hanbat_university": "한밭대학교",

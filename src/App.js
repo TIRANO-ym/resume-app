@@ -9,6 +9,10 @@ import BlockPage from "./page/second-page/block-page";
 function App() {
   const [isValid, setIsValid] = useState(false);
   useEffect(() => {
+    if (window.location.hostname === 'localhost') {
+      setIsValid(true);
+      return;
+    }
     // resume-ym token check
     const params = new URLSearchParams(window.location.search);
     const currentToken = params.get('token');
