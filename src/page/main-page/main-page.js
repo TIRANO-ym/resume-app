@@ -345,7 +345,7 @@ function Project() {
               </tr>
               <tr>
                 <td className="td">{t("project.deploy")}</td>
-                <td className="td" colSpan='4'>Docker<br/>Kubernetes</td>
+                <td className="td" colSpan='4'>Docker<br/>Kubernetes<br/>Apache HTTP Server</td>
               </tr>
             </tbody></table>
           </div>
